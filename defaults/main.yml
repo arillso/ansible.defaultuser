@@ -1,2 +1,55 @@
 ---
 # defaults file for arillso.defaultuser
+
+# Windows
+
+# Add or remove on the desktop the icons for Computer,
+# Recycle Bin, User Data, Control Panel, Network,
+# Add or Remove, must now enter the new settings.
+#
+# Option Name
+# {018D5C66-4533-4307-9B53-224DE2ED1FE6}  OneDrive
+# {20D04FE0-3AEA-1069-A2D8-08002B30309D}  Computer
+# {5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}  Systemsteuerung
+# {59031a47-3f72-44a7-89c5-5595fe6b30ee}  Benutzerordner
+# {645FF040-5081-101B-9F08-00AA002F954E}  Papierkorb
+# {F02C1A0D-BE21-4350-88B0-7367FC96EF3C}  Netzwerk
+#
+# Option Data
+# 0 Icon is displayed on the desktop
+# 1 Icon is hidden
+#
+defaultuser_explorer_shortcuts:
+  - name: '{20D04FE0-3AEA-1069-A2D8-08002B30309D}'
+    data: '0'
+  - name: '{59031a47-3f72-44a7-89c5-5595fe6b30ee}'
+    data: '0'
+  - name: '{645FF040-5081-101B-9F08-00AA002F954E}'
+    data: '0'
+
+# How to Hide or Show Known File Type Extensions.
+# See: https://bit.ly/2xxX3he
+
+defaultuser_file_ext_enabled: true
+
+# File Explorer was different in the way that it
+# would open Libraries instead of the default This PC.
+# If the value is set to True, This PC will be
+# displayed when you open the explorer.
+# See: https://bit.ly/2Xn3kH1
+defaultuser_this_pc_enabled: true
+
+# Turning on allows you to set the status of
+# the NumLock key when Windows starts.
+# See: https://bit.ly/2sI16Ua
+defaultuser_numlock_default_enabled: true
+
+# With this value you can set whether inactive
+# icons should be shown or hidden in the
+# systray. With true all icons are displayed.
+defaultuser_auto_tray_enabled: true
+
+# With this option the First Run wizard
+# of the internet Explorer can be
+# activated or deactivated.
+defaultuser_ie_first_run_wizard_enabled: false

@@ -1,9 +1,8 @@
 ---
 galaxy_info:
   role_name: defaultuser
-  author:
-  description:
-  company:
+  author: arillso
+  description: Role which configures the default profile under Linux and Windows
   license: MIT
   min_ansible_version: 2.8
   platforms:
@@ -28,6 +27,9 @@ galaxy_info:
       versions:
         - all
 
-  galaxy_tags: []
+  galaxy_tags:
+    - default
+    - profile
+    - user
 
 dependencies: []
