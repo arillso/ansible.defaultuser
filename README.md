@@ -104,8 +104,6 @@ defaultuser_ie_first_run_wizard_enabled: false
     - arillso.defaultuser
 ```
 
-## Changelog
-
 ## Author
 
 - [Simon Bärlocher](https://sbaerlocher.ch)
