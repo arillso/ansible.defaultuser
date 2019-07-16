@@ -4,7 +4,7 @@
 
 ## Description
 
-Role which configures the default profile under Linux and Windows.
+This role configures the desktop of a new user under Linux and Window. Under Windows, he turns on desktop icons on the This computer and disables or enables functions in Windows Explorer.
 
 ## Installation
 
