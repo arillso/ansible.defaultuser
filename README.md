@@ -24,14 +24,14 @@ Add or remove on the desktop the icons for Computer, Recycle Bin, User Data, Con
 
 ##### Option Name
 
-| Option                                 | Description     |
-| -------------------------------------- | --------------- |
-| {018D5C66-4533-4307-9B53-224DE2ED1FE6} | OneDrive        |
-| {20D04FE0-3AEA-1069-A2D8-08002B30309D} | Computer        |
-| {5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0} | Systemsteuerung |
-| {59031a47-3f72-44a7-89c5-5595fe6b30ee} | Benutzerordner  |
-| {645FF040-5081-101B-9F08-00AA002F954E} | Papierkorb      |
-| {F02C1A0D-BE21-4350-88B0-7367FC96EF3C} | Netzwerk        |
+| Option                                 | Description   |
+| -------------------------------------- | ------------- |
+| {018D5C66-4533-4307-9B53-224DE2ED1FE6} | OneDrive      |
+| {20D04FE0-3AEA-1069-A2D8-08002B30309D} | This PC       |
+| {5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0} | Control Panel |
+| {59031a47-3f72-44a7-89c5-5595fe6b30ee} | Users Files   |
+| {645FF040-5081-101B-9F08-00AA002F954E} | Recycle Bin   |
+| {F02C1A0D-BE21-4350-88B0-7367FC96EF3C} | Network       |
 
 ##### Option Data
 
