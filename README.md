@@ -4,7 +4,7 @@
 
 ## Description
 
-This role configures the desktop of a new user under Linux and Window. Under Windows, he turns on desktop icons on the This computer and disables or enables functions in Windows Explorer.
+This role configures the desktop of a new user under Window. Under Windows, it can enable/disable the desktop icons such as "This Computer", "Recycle Bin", etc., control some functions and views in Windows Explorer, activate Num Lock by default, enable/disable autotray and disable the First Run Wizard. (Linux support not yet implemented)
 
 ## Installation
 
@@ -18,7 +18,7 @@ ansible-galaxy install arillso.defaultuser
 
 ### Windows
 
-#### Explorer Shortcuts
+#### Desktop Shortcuts
 
 Add or remove on the desktop the icons for Computer, Recycle Bin, User Data, Control Panel, Network, Add or Remove, must now enter the new settings.
 
@@ -52,16 +52,16 @@ defaultuser_explorer_shortcuts:
 
 #### File Type Extensions
 
-How to Hide or Show Known File Type Extensions.
+Hide or show Known File Type Extensions.
 See: [https://bit.ly/2xxX3he](https://www.sevenforums.com/tutorials/10570-file-extensions-hide-show.html)
 
 ```yml
 defaultuser_file_ext_enabled: true
 ```
 
-#### File Explorer to Open This PC
+#### Windows Explorer to Open This PC
 
-File Explorer was different in the way that it would open Libraries instead of the default This PC. If the value is set to True, This PC will be displayed when you open the explorer.
+Windows Explorer by default opens with the Libraries selected. If this value is set to True, This PC will be selected when opening the explorer.
 
 See: [https://bit.ly/2Xn3kH1](https://www.itechtics.com/configure-windows-10-file-explorer-open-pc-instead-quick-access/)
 
@@ -71,7 +71,7 @@ defaultuser_this_pc_enabled: true
 
 #### Numlock
 
-Turning on allows you to set the status of the NumLock key when Windows starts.
+Sets the status of the NumLock key when Windows starts.
 See: [https://bit.ly/2sI16Ua](https://www.howtogeek.com/244606/how-to-enable-num-lock-automatically-when-your-computer-boots/)
 
 ```yml
@@ -80,7 +80,7 @@ defaultuser_numlock_default_enabled: true
 
 #### Autotray
 
-With this value you can set whether inactive icons should be shown or hidden in the systray. With true all icons are displayed.
+Controls whether inactive systray icons are shown or hidden. With true all icons are displayed.
 
 ```yml
 defaultuser_auto_tray_enabled: true
@@ -88,13 +88,15 @@ defaultuser_auto_tray_enabled: true
 
 #### First Run IE
 
-With this option the First Run wizard of the internet Explorer can be activated or deactivated.
+Controls if the First Run wizard of the internet Explorer is enabled or not.
 
 ```yml
 defaultuser_ie_first_run_wizard_enabled: false
 ```
 
 ## Dependencies
+
+none
 
 ## Example Playbook
 
