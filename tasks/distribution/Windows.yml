@@ -1,2 +1,68 @@
 ---
 # tasks file for arillso.defaultuser
+
+- name: 'windows : add shortcuts for all'
+  win_regedit:
+    path: "{{ path }}\\HideDesktopIcons\\NewStartPanel"
+    name: '{{ item.name }}'
+    type: dword
+    data: '{{ item.data }}'
+  with_items:
+    - '{{ defaultuser_explorer_shortcuts }}'
+  vars:
+    path: "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer"
+
+- name: 'windows : add shortcuts for default'
+  win_regedit:
+    path: '{{ path }}\\Explorer\\HideDesktopIcons\\NewStartPanel'
+    name: '{{ item.name }}'
+    type: dword
+    data: '{{ item.data }}'
+    hive: "C:\\Users\\Default\\NTUSER.dat"
+  with_items:
+    - '{{ defaultuser_explorer_shortcuts }}'
+  vars:
+    path: "HKLM:\\ANSIBLE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion"
+
+- name: 'windows : how to hide or show known file type extensions'
+  win_regedit:
+    path: "{{ path }}\\Explorer\\Advanced"
+    name: HideFileExt
+    data: "{{ '00000000' if defaultuser_file_ext_enabled else '00000001' }}"
+    type: dword
+    hive: "C:\\Users\\Default\\NTUSER.dat"
+  vars:
+    path: "HKLM:\\ANSIBLE\\Software\\Microsof\\Windows\\CurrentVersion"
+
+- name: 'windows : set This PC or *** as the default view for Windows Explorer'
+  win_regedit:
+    path: "{{ path }}\\Explorer\\Advanced"
+    name: LaunchTo
+    data: "{{ '00000001' if defaultuser_this_pc_enabled else '00000000' }}"
+    type: dword
+    state: present
+    hive: "C:\\Users\\Default\\NTUSER.dat"
+  vars:
+    path: "HKLM:\\ANSIBLE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion"
+
+- name: 'windows : enable numlock in default'
+  win_regedit:
+    path: "HKLM:\\ANSIBLE\\Control Panel\\Keyboard"
+    name: InitialKeyboardIndicators
+    data: "{{ '2' if defaultuser_numlock_default_enabled else '1' }}"
+    type: string
+    hive: "C:\\Users\\Default\\NTUSER.dat"
+
+- name: 'windows : hide inactive icons from the systray'
+  win_regedit:
+    path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer
+    name: EnableAutoTray
+    data: "{{ '00000001' if defaultuser_auto_tray_enabled else '00000000' }}"
+    type: dword
+
+- name: 'windows : revent running first run wizard'
+  win_regedit:
+    path: HKLM:\Software\Policies\Microsoft\Internet Explorer\Main
+    name: DisableFirstRunCustomize
+    data: "{{ '00000000' if defaultuser_ie_first_run_enabled else '00000001' }}"
+    type: dword
