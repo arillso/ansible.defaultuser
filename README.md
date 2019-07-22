@@ -91,7 +91,7 @@ defaultuser_auto_tray_enabled: true
 With this option the First Run wizard of the internet Explorer can be activated or deactivated.
 
 ```yml
-defaultuser_ie_first_run_wizard_enabled: false
+defaultuser_ie_first_run_enabled: false
 ```
 
 ## Dependencies
