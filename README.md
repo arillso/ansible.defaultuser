@@ -1,6 +1,6 @@
 # Ansible Role: defaultuser
 
-[![Build Status](https://img.shields.io/travis/arillso/ansible.defaultuser.svg?branch=master&style=popout-square)](https://travis-ci.org/arillso/ansible.defaultuser) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://sbaerlo.ch/licence) [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-defaultuser-blue.svg?style=popout-square)](https://galaxy.ansible.com/arillso/defaultuser) [![Ansible Role](https://img.shields.io/ansible/role/d/id.svg?style=popout-square)](https://galaxy.ansible.com/arillso/defaultuser)
+[![Build Status](https://img.shields.io/travis/arillso/ansible.defaultuser.svg?branch=master&style=popout-square)](https://travis-ci.org/arillso/ansible.defaultuser) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://sbaerlo.ch/licence) [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-defaultuser-blue.svg?style=popout-square)](https://galaxy.ansible.com/arillso/defaultuser) [![Ansible Role](https://img.shields.io/ansible/role/d/41788.svg?style=popout-square)](https://galaxy.ansible.com/arillso/defaultuser)
 
 ## Description
 
@@ -116,4 +116,4 @@ This project is under the MIT License. See the [LICENSE](https://sbaerlo.ch/lice
 
 ## Copyright
 
-(c) 2019, Arillso
+(c) 2020, Arillso
